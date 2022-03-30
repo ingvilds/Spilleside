@@ -1,0 +1,279 @@
+/*generell css*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing:border-box;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h2 {
+    font-size: 33px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 15px;
+}
+
+/*CSS for navbaren.*/
+.navbar { 
+  height: 80px;
+  width: 100%;
+  background-color: rgba(14, 10, 0, 0.98);
+}
+
+.logo { /*CSS for logoen i venstre hjørnet*/
+  width: 80px;
+  padding-left: 20px;
+  float: left;
+  margin-top: 10px;
+}
+
+
+.navbar ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul { 
+  display: flex;
+  justify-content: space-around; /*bedre enn space between, luft på begge steder*/
+  /* for å få punktet foran*/
+  list-style: none;
+  color: #fff;
+  margin-left: 30%;
+}
+.navbar ul li {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+/*CSS for når man trykker på listepunktet*/
+.navbar ul li:hover {
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 0 1px #faa609,
+              0 0 1px #faa609;
+  border-radius: 5px;
+}
+.aktiv {
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px #faa609,
+              0 0 5px #faa609;
+  border-radius: 5px;
+}
+
+/*CSS for forsidebildet og tittelen. */
+.hoved {
+    background: linear-gradient(to top, rgba(0,0,0,0.7)40%, rgba(0,0,0,0.4)70%), url(./Bilder.innlevering/harry-potter-975362.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+.text-box {
+  background-color: rgba(14, 10, 0, 0.9);
+  color: white;
+  padding: 10px;
+  font-size: 35px;
+  font-family: 'Mon';
+  margin-left: 35%;
+  width: 30%;
+}
+.text-box h1 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 70px;
+  align-items: center; 
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+/*CSS for griden med spillene. */
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
+  align-items: center;
+  max-width: 90vw;
+}
+
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+
+    align-items: center;
+    width: 100%;
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+    align-items: center;
+    text-align: center;
+}
+
+.TekstBilder p {
+  margin-top: 10px;
+  font-size: 17px;
+  align-items: center;
+  text-align: center;
+}
+
+
+.image-grid{
+  border: rgba(14, 10, 0, 0.925) solid 1.5px;
+  border-radius: 10px;
+}
+
+.minesweeper{
+  margin-top: 6vh;
+}
+
+
+/* CSS for teksten i griden. */
+
+.Knapp{
+  /*CSS inspirert fra (https://www.w3schools.com/css/css3_buttons.asp) W3 schools.*/
+  background-color: rgba(14, 10, 0, 0.85);
+  color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  align-items: center;
+  margin-bottom: -15px;
+  margin-top: 50px;
+
+/* CSS inspirert fra (https://getcssscan.com/css-buttons-examples) av Foundation.*/
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  touch-action: manipulation;
+}
+
+.Knapp:disabled {
+  pointer-events: none;
+}
+
+.Knapp:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.Knapp:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* CSS for bunnen. */
+.bottombar {
+  border-top: 2px solid rgba(14, 10, 0, 0.925);
+  width: 100%;
+  padding:10px;
+  margin-top: 10vh;
+}
+.bottombar h5 {
+  font-size: 17px;
+  letter-spacing: 1.4rem;
+  text-align: center;
+}
+
+
+/* Responsiv for ulike skjermstørrelser*/
+@media (max-width: 800px) {
+
+  /*NAVBAR*/
+    .logo {
+        width: 70px;
+        margin-top: 10px;
+    }
+    .navbar ul li {
+        font-size: 12px;
+        margin-top: 28px;
+        gap: 100px;
+    }
+
+    .navbar ul {
+      justify-content: space-around;
+      margin-right: 10px;
+  }
+
+
+/*TITTEL*/
+
+    .text-box {
+       margin-left: 25%;
+       width: 50%;
+       gap: 30px;
+    }
+    .text-box h1 {
+      font-size: 60px;
+    }
+
+/*GRID*/
+
+  .Bilder {
+      flex-direction: column;
+      width: 70%;
+      margin-left: 15%;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 15px;
+    }
+
+  .col {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .Bilder {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 270px;
+  }
+
+  .grid {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+
+  /*BUNN*/
+
+  .bottombar h5 {
+    font-size: 12px;
+    letter-spacing: 0.8rem;
+  }
+}
+
+
